@@ -1,0 +1,167 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+header {
+    width: 100%;
+    height: 600px;
+    background: #239da1;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(24, 2%, 53%, 0.459), hsla(98, 35%, 45%, 0.664)), url(../img/1.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,  hsla(60, 1%, 32%, 0.459), hsla(98, 35%, 45%, 0.664)), url(../img/1.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 1000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+@media (min-width:768px) /**rsolucion estandar de una tablet**/
+{
+    .tres-columnas
+    {
+     display: grid;/**te permite tener las propiedades de grid**/
+     grid-template-columns: repeat(3, 1fr);/**tres columnas de una fraccion**/
+    /** grid-template-rows:33.3%  33.3%  33.3%;/**porcentaje**/
+     column-gap: 4rem;
+    
+    }
+    
+}
+/** CODIGO AQUI **/
+@media (min-width:768px) /**rsolucion estandar de una tablet**/
+{
+    .dos-columnas
+    {
+     display: grid;/**te permite tener las propiedades de grid**/
+     grid-template-columns: repeat(2, 1fr);/**tres columnas de una fraccion**/
+    /** grid-template-rows:33.3%  33.3%  33.3%;/**porcentaje**/
+     column-gap: 4rem;
+    
+    }
+    
+}
+
+/**galeria de imagenes reprecentativas**/
+h2{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 40px;
+}
+.linea{
+    background: #11704cc4;
+    height: 20px;
+    width: 100%;
+    display: block;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.galeria a:hover img{
+    transform: rotate(10deg) scale(1.3);
+}
+
+/**footer**/
+.footer
+{
+  background-color:#11704cc4;  /**pone la barra oscura**/
+padding: 1rem 0;
+margin-top: 2rem;
+}
+.footer_texto
+{
+  text-align: center; /**centrar texto**/
+  font-family: 'Staatliches', cursive; /**fuente principal**/
+}
